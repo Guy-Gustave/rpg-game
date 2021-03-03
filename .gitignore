@@ -4,11 +4,18 @@ Thumbs.db
 .idea
 *.suo
 *.sublime-project
-*.sublime-workspace
 
 # Vendors
+**/*.js
 node_modules/
 
 # Build
-dist/
+# dist
 /npm-debug.log
+**/*.js
+vendor/**/*.css
+node_modules
+node_modules
+node_modules
+node_modules
+node_modules

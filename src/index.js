@@ -1,39 +1,37 @@
+/* eslint-disable */ 
+
 import Phaser from 'phaser';
-import logoImg from './assets/logo.png';
+import config from './Config/config';
+import GameScene from './Scenes/GameScene';
+import BootScene from './Scenes/BootScene';
+import PreloaderScene from './Scenes/PreloaderScene';
+import TitleScene from './Scenes/TitleScene';
+import OptionsScene from './Scenes/OptionsScene';
+import CreditsScene from './Scenes/CreditsScene';
+import WorldScene from './Scenes/WorldScene';
+import GameOverScene from './Scenes/GameOverScene';
+import HelpScene from './Scenes/HelpScene';
+import ScoreScene from './Scenes/ScoreScene';
+import Model from './Model';
 
-class MyGame extends Phaser.Scene
-{
-    constructor ()
-    {
-        super();
-    }
+class Game extends Phaser.Game {
+  constructor() {
+    super(config);
+    const model = new Model();
 
-    preload ()
-    {
-        this.load.image('logo', logoImg);
-    }
-      
-    create ()
-    {
-        const logo = this.add.image(400, 150, 'logo');
-      
-        this.tweens.add({
-            targets: logo,
-            y: 450,
-            duration: 2000,
-            ease: "Power2",
-            yoyo: true,
-            loop: -1
-        });
-    }
+    this.globals = { model, bgMusic: null };
+    this.scene.add('Boot', BootScene);
+    this.scene.add('Preloader', PreloaderScene);
+    this.scene.add('Title', TitleScene);
+    this.scene.add('Options', OptionsScene);
+    this.scene.add('Credits', CreditsScene);
+    this.scene.add('Game', GameScene);
+    this.scene.add('World', WorldScene);
+    this.scene.add('GameOver', GameOverScene);
+    this.scene.add('Help', HelpScene);
+    this.scene.add('Score', ScoreScene);
+    this.scene.start('Boot');
+  }
 }
 
-const config = {
-    type: Phaser.AUTO,
-    parent: 'phaser-example',
-    width: 800,
-    height: 600,
-    scene: MyGame
-};
-
-const game = new Phaser.Game(config);
+window.game = new Game();

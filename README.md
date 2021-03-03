@@ -1,49 +1,103 @@
-# Phaser 3 Webpack Project Template
+# JS_Capstone_LOS
 
-A Phaser 3 project template with ES6 support via [Babel 7](https://babeljs.io/) and [Webpack 4](https://webpack.js.org/) that includes hot-reloading for development and production-ready builds.
+## Description
 
-This has been updated for Phaser 3.50.0 version and above.
+This is the Capstone project for Javascript in Microverse Curriculum. The player has to collect Coins to get score ,without touching the fire from various platforms by avoiding different obstacles and enemies.  Please read the Game Design Document for further information about the story and the gameplay.
 
-Loading images via JavaScript module `import` is also supported, although not recommended.
+## Game Design Documentation
+[Documentation](./gamedoc.md)
 
-## Requirements
+## Live demo
 
-[Node.js](https://nodejs.org) is required to install dependencies and run scripts via `npm`.
+https://wonderful-thompson-ca3d46.netlify.app/
 
-## Available Commands
+# video description
 
-| Command | Description |
-|---------|-------------|
-| `npm install` | Install project dependencies |
-| `npm start` | Build project and open web server running project |
-| `npm run build` | Builds code bundle with production settings (minification, uglification, etc..) |
+https://www.loom.com/share/d3c7609fa7014b3a9e2bac23d5ab93bd
 
-## Writing Code
+## Screenshots
 
-After cloning the repo, run `npm install` from your project directory. Then, you can start the local development server by running `npm start`.
+![screenshot](./assets/coin1.png)
+![screenshot](./assets/coin2.png)
 
-After starting the development server with `npm start`, you can edit any files in the `src` folder and webpack will automatically recompile and reload your server (available at `http://localhost:8080` by default).
+## Prerequisites
 
-## Customizing the Template
+You must have a browser on your PC in order to use the application. [Click here](https://www.google.com/chrome/?brand=BNSD&gclid=Cj0KCQiAvvKBBhCXARIsACTePW--A0qs3Kbv1U6UvAZa4xW4Oog_Y19cI2opD2oZ-IIZAni4jzH6MQgaAi-6EALw_wcB&gclsrc=aw.ds) to download one.
 
-### Babel
 
-You can write modern ES6+ JavaScript and Babel will transpile it to a version of JavaScript that you want your project to support. The targeted browsers are set in the `.babelrc` file and the default currently targets all browsers with total usage over "0.25%" but excludes IE11 and Opera Mini.
+## Instructions
+You can control the player using a mouse and a keyboard. You can move around the map in directions up, left and right.
 
- ```
-"browsers": [
-  ">0.25%",
-  "not ie 11",
-  "not op_mini all"
-]
- ```
+To move the player:
 
-### Webpack
+- PRESS "Left arrow key" to move Left
+- PRESS "Right arrow key" to move Right
+- PRESS "arrow key up" to Jump
 
-If you want to customize your build, such as adding a new webpack loader or plugin (i.e. for loading CSS or fonts), you can modify the `webpack/base.js` file for cross-project changes, or you can modify and/or create new configuration files and target them in specific npm tasks inside of `package.json'.
+## Built With
 
-## Deploying Code
+- Javascript
+- Phaser 3
+- VS code
+- Stylelint
+- Eslint
+- Npm
+- Webpack
+- Jest Tests
 
-After you run the `npm run build` command, your code will be built into a single bundle located at `dist/bundle.min.js` along with any other assets you project depended. 
 
-If you put the contents of the `dist` folder in a publicly-accessible location (say something like `http://mycoolserver.com`), you should be able to open `http://mycoolserver.com/index.html` and play your game.
+## Getting Started
+
+To get a local copy of the repository please run the following commands on your terminal:
+
+```bash
+$ open terminal or gitbash
+$ cd <folder>
+$ git clone ``
+$ cd rpg-game
+$ run npm install
+$ run "npm run start"
+```
+
+### Design Process
+
+GetCoins design process started with the idea of creating a simple and beautiful RPG.  I got inspired by the RPG classic the supermario. and thanks to opengameart.org  for posting all of these amazing spirites and tiels  used in the game.
+
+the game entire map was built with Tiled on a 32 x 32 collection other than the cowboy that was built on 45 x 44   of squares.
+first I created player and coins to get scores then I added the fire so the player will have some obstacles to run from.
+
+## Testing
+
+To test the project:
+
+```
+$ Open Terminal again
+$ Run cd rpg-game to enter directory
+$ Run npm run test to start testing
+$ All tests will pass ✅
+
+```
+
+## Author
+
+👨 **Guy Gustave NIGABA**
+- Github: [@Gustave](https://github.com/Guy-Gustave)
+- Linkedin: [Guy-Gustave](https://www.linkedin.com/in/guy-gustave-nigaba/)
+- E-mail: [guymoustapha@gmail.com](guymoustapha@gmail.com)
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Copyright
+This is a project developed by Microverse Student as the part of skill curriculum.
+
+## Acknowledgments
+
+- <a href="https://www.theodinproject.com/" target="_blank">The Odin Project</a>
+
+- <a href="https://www.opengameart.org" target="_blank">Opengameart</a>
