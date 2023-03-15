@@ -6,6 +6,8 @@ This has been updated for Phaser 3.50.0 version and above.
 
 Loading images via JavaScript module `import` is also supported, although not recommended.
 
+## check it on  [live demo](https://clever-guy-rpg-game.netlify.app/)
+
 ## Requirements
 
 [Node.js](https://nodejs.org) is required to install dependencies and run scripts via `npm`.
